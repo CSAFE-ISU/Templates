@@ -1,0 +1,239 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% baposter Landscape Poster
+% LaTeX Template
+%
+% baposter Class Created by:
+% Brian Amberg (baposter@brian-amberg.de)
+%
+% License:
+% CC BY-NC-SA 3.0 (http://creativecommons.org/licenses/by-nc-sa/3.0/)
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%% Note:
+%%% The CSAFE version of this poster MUST be compiled with XeTeX because it
+%%% uses custom fonts that LaTeX doesn't have the ability to handle
+%%%
+%%% You may have to install the fonts (in the fonts/ directory) to your machine
+%%% in order to compile without errors.
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\documentclass[landscape, a0paper, fontscale=0.275, margin = 30mm]{baposter}
+% Adjust the font scale/size here - bigger value = smaller font
+% Other options:
+%   - showframe (shows frame around whole poster, useful for debugging
+%   - movebody=Xpt (moves body - center on page.
+%                   Positive values move right, negative move left)
+%   - a4shrink (shrink to A4 for handouts)
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%% Packages that make baposter work well(ish)                               %%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+% This removes any blank page added in the beginning of a document
+\usepackage{atbegshi}% http://ctan.org/pkg/atbegshi
+\AtBeginDocument{\AtBeginShipoutNext{\AtBeginShipoutDiscard}}
+\pretolerance=10000
+
+\usepackage{natbib} % References
+
+\usepackage{setspace}
+\usepackage{graphicx} % Required for including images
+\usepackage{booktabs} % Top and bottom rules for tables
+\usepackage{tabularx} % Stretchy tables
+\usepackage{tabu} % Stretchy tables
+\usepackage[hypcap=false,font=small,labelfont=bf]{caption} % Required for
+                                                           % specifying captions
+                                                           % to tables and
+                                                           % figures
+\usepackage[export]{adjustbox} % Frames around images
+\usepackage{url} % Formats URLs properly (hyperref doesn't work with baposter)
+\urlstyle{sf}
+
+% \usepackage{tikz} % Required for flow chart
+% \usetikzlibrary{shapes,arrows} % Tikz libraries required for the flow chart
+%                                % in the template
+
+\usepackage{multicol} % Required for multiple columns
+\setlength{\columnsep}{1.5em} % Slightly increase the space between columns
+\setlength{\columnseprule}{0mm} % No horizontal rule between columns
+
+\usepackage{enumitem} % Itemize separation
+\setlist{nosep} % or \setlist{noitemsep} to leave space around whole list
+\setitemize{nolistsep,leftmargin=*}
+\setenumerate{nolistsep,leftmargin=*}
+\newcommand{\compresslist}{
+% Define a command to reduce spacing within itemize/enumerate environments,
+% this is used right after \begin{itemize} or \begin{enumerate}
+\setlength{\itemsep}{1pt}
+\setlength{\parskip}{0pt}
+\setlength{\parsep}{0pt}
+}
+
+\usepackage{amsmath} % For typesetting math
+\usepackage{amssymb} % Adds new symbols to be used in math mode
+\usepackage{fontspec} % Use fonts
+
+\usepackage[english]{babel} % Generate babel text
+\usepackage{blindtext} % Generate blind text to fill in space
+% This command allows you to set the border/header color in one go
+\newcommand{\headercolorbox}[4]{%
+  \begin{posterbox}[#3,borderColor=#2,headerColorOne=#2,headerColorTwo=#2]{#1}
+    #4
+  \end{posterbox}
+}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%% CSAFE Styling (from Identity Guide)                                      %%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\setmainfont[Ligatures=TeX]{Sanchez}[
+  Path=fonts/, Extension = .ttf,
+  UprightFont=*-Regular,
+  ItalicFont=*-Italic
+]
+\setsansfont[Ligatures=TeX]{Montserrat}[
+  Path=fonts/, Extension = .ttf,
+  UprightFont=*-Light,
+  BoldFont=*-Bold,
+  ItalicFont=*-LightItalic,
+  BoldItalicFont=*-BoldItalic
+]
+\setmonofont[Ligatures=TeX]{Inconsolata}[
+  Path=fonts/, Extension = .ttf,
+  UprightFont=*-Regular,
+  BoldFont=*-Bold
+]
+% Use montserrat as default font
+\renewcommand{\familydefault}{\sfdefault}
+% Create command \sanchez to use for headings with Sanchez
+\newfontfamily\sanchez[UprightFont={*-Italic}]{Sanchez}
+
+\definecolor{white}{rgb}{1,1,1} % Defines the color used for content box headers
+% CSAFE Colors
+\definecolor{csafedarkblue}{rgb}{0,.227,0.439} % Default for content box headers
+\definecolor{csafelightblue}{rgb}{.251, .706, .898}
+\definecolor{csafegreen}{rgb}{.467, .737, .122}
+\definecolor{csafered}{rgb}{.811, .039, .173}
+\definecolor{csafegrey}{rgb}{.541, .541, .553}
+\definecolor{csafegray}{rgb}{.541, .541, .553}
+
+\renewcommand{\figurename}{Fig.} % Shorten figure caption label
+\graphicspath{{figures/}{images/}{figure/}{image/}} % Directory in which figures are stored
+
+\newcommand\csafelogo[1][height=7em]{\includegraphics[#1]{figures/logo.png}}
+\newcommand\nistlogo[1][height=5em]{\includegraphics[#1]{figures/logo-NIST.jpg}}
+
+\newcommand\csafeboilerplate{\vspace*{0.05em}\hspace{-5mm}\tiny{This work was partially funded by CSAFE through Cooperative Agreement \# 70NANB15H176 between NIST and Iowa State University, which includes activities carried out at Carnegie Mellon University, University of California Irvine, and University of Virginia}}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\begin{document}
+\begin{poster}
+{
+% grid=true, % show grid to help align stuff
+columns=3,
+background=none,
+colspacing=1em, % Column spacing
+textborder=rectangle, % Format of the border around content boxes, can be:
+                      % none, bars, coils, triangles, rectangle, rounded,
+                      % roundedsmall, roundedright, roundedleft, or faded
+boxshade=none,
+bgColorOne=white,
+bgColorTwo=white,
+borderColor=csafedarkblue,
+headerheight=0.14\textheight, % Height of the header
+headerborder=closed, % Adds a border around the header of content boxes
+headershape=rectangle, % Corner in the content box headers, can be: rectangle,
+                       % small-rounded, roundedright, roundedleft or rounded
+headershade=plain,
+headerColorOne=csafedarkblue,
+headerColorTwo=csafedarkblue,
+headerFontColor=white,
+headerfont=\Large\bf, % Large, bold font in the headers of content boxes
+linewidth=1.5pt % Width of the border lines around content boxes
+}
+%-------------------------------------------------------------------------------
+%	TITLE SECTION
+%-------------------------------------------------------------------------------
+%
+\csafelogo
+{\huge\bf Poster Title \vspace{0.3em}} % Poster title
+{\Large Poster Authors\vspace*{-0.6em}} % Author names and institution
+\nistlogo
+
+%---------------------------------------------------------------------------------
+%	OBJECTIVES
+%---------------------------------------------------------------------------------
+
+\headercolorbox{Objectives}{csafelightblue}{name=objectives,column=0,row=0}{
+\blinditemize[6]
+}
+
+%----------------------------------------------------------------------------------------
+%	METHODS
+%----------------------------------------------------------------------------------------
+
+\headercolorbox{Methods}{csafegreen}{name=methods,column=0,below=objectives,above=bottom}{
+\blindtext
+\blinditemize[8]
+\blindtext
+}
+
+%----------------------------------------------------------------------------------------
+%	DEMO URL
+%----------------------------------------------------------------------------------------
+
+\headercolorbox{Try it out!}{csafered}{name=url,column=1,row=0,span=2}{
+\url{https://something.goes.here.com}
+}
+
+
+%----------------------------------------------------------------------------------------
+%	Results 1
+%----------------------------------------------------------------------------------------
+
+\headerbox{Results}{name=res1,column=1,below=url}{
+\blindtext
+}
+
+%----------------------------------------------------------------------------------------
+%	Other
+%----------------------------------------------------------------------------------------
+
+\headercolorbox{Other}{csafelightblue}{name=other,column=1,span=1,below=res1,above=bottom}{
+\blindtext[2]
+}
+
+%----------------------------------------------------------------------------------------
+%	Results 3
+%----------------------------------------------------------------------------------------
+
+\headerbox{Even More Results}{name=res2,column=2,span=1,below=url}{
+\blindtext
+}
+
+%----------------------------------------------------------------------------------------
+%	Applications
+%----------------------------------------------------------------------------------------
+
+\headerbox{Future Work}{name=fw,column=2,span=1,below=res2}{
+\blindtext
+}
+
+
+%----------------------------------------------------------------------------------------
+%	REFERENCES
+%----------------------------------------------------------------------------------------
+
+\headerbox{References}{name=refs,column=2,row=1,span=1,below=fw,above=bottom}{
+\renewcommand{\section}[2]{} % Get rid of the default "References" section title
+\renewcommand{\bibfont}{\tiny}\setlength{\bibsep}{0pt plus 0.2ex}
+\bibliographystyle{unsrt}
+\bibliography{Refs}
+}
+
+\csafeboilerplate
+\end{poster}
+\end{document}
