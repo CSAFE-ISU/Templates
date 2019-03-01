@@ -75,7 +75,7 @@
 
 %% CSAFE Background
 \usebackgroundtemplate{%
-  \includegraphics[width=\paperwidth,height=\paperheight]{csafe-navy-background}} 
+  \includegraphics[width=\paperwidth,height=\paperheight]{csafe-blue-background}} 
  
 
 \section{Introduction}
