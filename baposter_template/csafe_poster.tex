@@ -32,6 +32,7 @@
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 % This removes any blank page added in the beginning of a document
+% If nothing appears when you compile, comment this out!
 \usepackage{atbegshi}% http://ctan.org/pkg/atbegshi
 \AtBeginDocument{\AtBeginShipoutNext{\AtBeginShipoutDiscard}}
 \pretolerance=10000
@@ -83,6 +84,11 @@
     #4
   \end{posterbox}
 }
+\newcommand{\allhandsbox}[3]{%
+  \begin{posterbox}[#2,borderColor=csafedarkblue,headerColorOne=csafedarkblue,headerColorTwo=csafedarkblue]{#1}
+    #3
+  \end{posterbox}
+}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -122,8 +128,7 @@
 \renewcommand{\figurename}{Fig.} % Shorten figure caption label
 \graphicspath{{figures/}{images/}{figure/}{image/}} % Directory in which figures are stored
 
-\newcommand\csafelogo[1][height=7em]{\includegraphics[#1]{figures/logo.png}}
-\newcommand\nistlogo[1][height=5em]{\includegraphics[#1]{figures/logo-NIST.jpg}}
+\newcommand\csafelogo[1][width=14em]{\includegraphics[#1]{figures/logo.png}}
 
 \newcommand\csafeboilerplate{\vspace*{0.05em}\hspace{-5mm}\tiny{This work was partially funded by CSAFE through Cooperative Agreement \# 70NANB15H176 between NIST and Iowa State University, which includes activities carried out at Carnegie Mellon University, University of California Irvine, and University of Virginia}}
 
@@ -161,13 +166,13 @@ linewidth=1.5pt % Width of the border lines around content boxes
 \csafelogo
 {\huge\bf Poster Title \vspace{0.3em}} % Poster title
 {\Large Poster Authors\vspace*{-0.6em}} % Author names and institution
-\nistlogo
+% Institution logo could go here
 
 %---------------------------------------------------------------------------------
 %	OBJECTIVES
 %---------------------------------------------------------------------------------
 
-\headercolorbox{Objectives}{csafelightblue}{name=objectives,column=0,row=0}{
+\allhandsbox{Objectives}{name=objectives,column=0,row=0}{
 \blinditemize[6]
 }
 
@@ -175,7 +180,7 @@ linewidth=1.5pt % Width of the border lines around content boxes
 %	METHODS
 %----------------------------------------------------------------------------------------
 
-\headercolorbox{Methods}{csafegreen}{name=methods,column=0,below=objectives,above=bottom}{
+\allhandsbox{Methods}{name=methods,column=0,below=objectives,above=bottom}{
 \blindtext
 \blinditemize[8]
 \blindtext
@@ -185,7 +190,7 @@ linewidth=1.5pt % Width of the border lines around content boxes
 %	DEMO URL
 %----------------------------------------------------------------------------------------
 
-\headercolorbox{Try it out!}{csafered}{name=url,column=1,row=0,span=2}{
+\allhandsbox{Try it out!}{name=url,column=1,row=0,span=2}{
 \url{https://something.goes.here.com}
 }
 
@@ -202,7 +207,7 @@ linewidth=1.5pt % Width of the border lines around content boxes
 %	Other
 %----------------------------------------------------------------------------------------
 
-\headercolorbox{Other}{csafelightblue}{name=other,column=1,span=1,below=res1,above=bottom}{
+\allhandsbox{Other}{name=other,column=1,span=1,below=res1,above=bottom}{
 \blindtext[2]
 }
 
@@ -233,7 +238,6 @@ linewidth=1.5pt % Width of the border lines around content boxes
 \bibliographystyle{unsrt}
 \bibliography{Refs}
 }
-
-\csafeboilerplate
 \end{poster}
+\csafeboilerplate
 \end{document}
