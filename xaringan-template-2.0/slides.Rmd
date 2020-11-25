@@ -1,0 +1,88 @@
+---
+title: "CSAFE 2.0 Template"
+author: "Susan Vanderplas"
+date: "2020-11-25"
+output:
+  xaringan::moon_reader:
+    mathjax: "https://cdn.bootcss.com/mathjax/2.7.1/MathJax.js?config=TeX-MML-AM_HTMLorMML"
+    css: ["default", "css/csafe.css", "css/csafe-fonts.css", "css/this-presentation.css"]
+    lib_dir: libs
+    nature:
+      countIncrementalSlides: false
+---
+
+class: primary-blue
+## Blue slide
+
+- bullet 1 
+- bullet 2
+- bullet 3
+
+---
+class: primary-green
+# Green slide
+
+.img75[![Include other csafe images like so](images/equation-green.svg)]
+
+.footer[This is a footer note]
+
+---
+class: primary-red
+# Red slide
+.pull-right[
+Normal xaringan classes still work
+] 
+.pull-left[
+.img50[![another image](images/dots-red.svg)]
+]
+
+---
+class:primary-grey
+### Grey slide
+
+Here's a boring grey slide
+
+---
+class:primary-cyan
+## Cyan slide
+
+Here's a pretty cyan slide
+
+---
+class:primary-cyan
+## Cyan slide
+
+Here's a pretty cyan slide
+
+---
+class:inverse-grey
+## Inverse slide - grey
+
+Here's an inverse slide with a grey background
+
+---
+class:inverse-blue
+## Inverse slide - blue
+
+Here's an inverse slide with a blue background
+
+
+---
+class:secondary-blue
+## Here's a secondary slide
+
+---
+class:secondary-cyan
+## Here's a secondary slide
+
+---
+class:secondary-red
+## Here's a secondary slide
+
+---
+class:secondary-green
+## Here's a secondary slide
+
+---
+class:secondary-grey
+## Here's a secondary slide
