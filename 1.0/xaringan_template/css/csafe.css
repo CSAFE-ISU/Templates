@@ -162,11 +162,19 @@
 }
 
 .move-up {
-  padding-top:-50px !important;
+  margin-top:-50px !important;
+}
+
+.nudge-up {
+  margin-top:-20px !important;
 }
 
 .move-left {
-  margin-left:-25px !important;
+  margin-left:-50px !important;
+}
+
+.nudge-left {
+  margin-left:-20px !important;
 }
 
 /* Allow printing w/ speaker notes...https://github.com/gnab/remark/issues/70 */
