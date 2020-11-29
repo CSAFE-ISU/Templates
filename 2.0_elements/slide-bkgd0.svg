@@ -74,6 +74,22 @@
          id="path1052"
          inkscape:connector-curvature="0" />
     </clipPath>
+    <clipPath
+       clipPathUnits="userSpaceOnUse"
+       id="clipPath938-3">
+      <path
+         d="M 198,630 H 389.5 V 718.6 H 198 Z"
+         id="path936-5"
+         inkscape:connector-curvature="0" />
+    </clipPath>
+    <clipPath
+       clipPathUnits="userSpaceOnUse"
+       id="clipPath994-6">
+      <path
+         d="M 198,635.9 H 389.5 V 712.7 H 198 Z"
+         id="path992-2"
+         inkscape:connector-curvature="0" />
+    </clipPath>
   </defs>
   <sodipodi:namedview
      id="base"
@@ -83,7 +99,7 @@
      inkscape:pageopacity="0.0"
      inkscape:pageshadow="2"
      inkscape:zoom="1.4"
-     inkscape:cx="1224"
+     inkscape:cx="1112"
      inkscape:cy="631.5"
      inkscape:document-units="mm"
      inkscape:current-layer="layer1"
@@ -622,16 +638,23 @@
        id="rect3586"
        width="240.3"
        height="6.403"
-       x="-0.05237"
+       x="-0.02917"
        y="116.8" />
+    <rect
+       style="opacity:1;fill:#003a70;fill-opacity:1;stroke:#000000;stroke-width:0.0434;stroke-linecap:round;stroke-linejoin:bevel;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1"
+       id="rect3586-6"
+       width="240.3"
+       height="6.352"
+       x="-0.02917"
+       y="290.6" />
     <g
        id="g6427"
-       transform="translate(207.9,-142.8)">
+       transform="matrix(0.7525,0,0,0.7525,216.1,-76.42)">
       <g
          transform="matrix(0.3528,0,0,-0.3528,-63.72,518.3)"
          id="g932">
         <g
-           clip-path="url(#clipPath938)"
+           clip-path="url(#clipPath938-3)"
            id="g934">
           <g
              transform="translate(243.6,662.3)"
@@ -747,7 +770,7 @@
          transform="matrix(0.3528,0,0,-0.3528,-63.72,518.3)"
          id="g988">
         <g
-           clip-path="url(#clipPath994)"
+           clip-path="url(#clipPath994-6)"
            id="g990">
           <g
              transform="translate(249.7,654.9)"
@@ -797,12 +820,5 @@
         </g>
       </g>
     </g>
-    <rect
-       style="opacity:1;fill:#003a70;fill-opacity:1;stroke:#000000;stroke-width:0.0434;stroke-linecap:round;stroke-linejoin:bevel;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1"
-       id="rect3586-6"
-       width="240.3"
-       height="6.352"
-       x="-0.0603"
-       y="290.7" />
   </g>
 </svg>

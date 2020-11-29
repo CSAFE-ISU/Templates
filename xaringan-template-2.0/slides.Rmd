@@ -11,36 +11,50 @@ output:
       countIncrementalSlides: false
 ---
 
+class: inverse-blue, center, middle
+# Basics
+
+---
 class: primary-blue
 ## Blue slide
 
-- bullet 1 
-- bullet 2
-- bullet 3
+- Each slide type (except the title slide) comes in 5 colors: **.blue[blue], .green[green], .cyan[cyan], .red[red], .grey[grey]**
+    
+- Slide types: 
+    - inverse (previous slide), 
+    - primary (this slide), 
+    - secondary (next slide)
+
+- Most defaults are set up to e.g. change slide number color for the color and slide type.
 
 ---
-class: primary-green
-# Green slide
+class: secondary-blue
+# Secondary slide
 
-.img75[![Include other csafe images like so](images/equation-green.svg)]
+Include other csafe images like so (with color versions):
+.img75[![](images/equation-blue.svg)]
+This uses a new class, img75, to make the image 75% of the container width.
 
 .footer[This is a footer note]
 
 ---
 class: primary-red
-# Red slide
-.pull-right[
-Normal xaringan classes still work
-] 
+# Red primary slide
+
 .pull-left[
 .img50[![another image](images/dots-red.svg)]
-]
+].pull-right[
+Normal xaringan classes still work, but I've added some new ones too
+
+
+This uses a new class, img50, to make the image 50% of the container width.
+] 
 
 ---
 class:primary-grey
 ### Grey slide
 
-Here's a boring grey slide
+Here's a boring grey slide with a h3 header
 
 ---
 class:primary-cyan
@@ -49,40 +63,6 @@ class:primary-cyan
 Here's a pretty cyan slide
 
 ---
-class:primary-cyan
-## Cyan slide
-
-Here's a pretty cyan slide
-
----
-class:inverse-grey
-## Inverse slide - grey
-
-Here's an inverse slide with a grey background
-
----
-class:inverse-blue
-## Inverse slide - blue
-
-Here's an inverse slide with a blue background
-
-
----
-class:secondary-blue
-## Here's a secondary slide
-
----
-class:secondary-cyan
-## Here's a secondary slide
-
----
-class:secondary-red
-## Here's a secondary slide
-
----
-class:secondary-green
-## Here's a secondary slide
-
----
-class:secondary-grey
-## Here's a secondary slide
+class:inverse-green, center
+# A green inverse slide
+## With centering

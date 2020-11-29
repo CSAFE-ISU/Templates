@@ -82,9 +82,9 @@
      borderopacity="1.0"
      inkscape:pageopacity="0.0"
      inkscape:pageshadow="2"
-     inkscape:zoom="3.96"
-     inkscape:cx="898.2"
-     inkscape:cy="116.3"
+     inkscape:zoom="5.6"
+     inkscape:cx="537"
+     inkscape:cy="92.24"
      inkscape:document-units="mm"
      inkscape:current-layer="layer1"
      showgrid="true"
@@ -626,7 +626,7 @@
        y="116.8" />
     <g
        id="g6427"
-       transform="translate(207.9,-142.6)">
+       transform="matrix(0.7524,0,0,0.7524,216.2,-76.16)">
       <g
          transform="matrix(0.3528,0,0,-0.3528,-63.72,518.3)"
          id="g932">
@@ -803,6 +803,6 @@
        width="240.3"
        height="6.352"
        x="-0.0603"
-       y="290.7" />
+       y="290.6" />
   </g>
 </svg>
